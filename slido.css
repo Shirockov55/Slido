@@ -1,0 +1,109 @@
+.pager, .slido {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.pager li, .slido > li {
+  list-style: none;
+  /*margin: 0;*/
+  padding: 0; }
+
+.controls {
+  cursor: pointer;
+  z-index: 100;
+  bottom: calc(50% - 17px);
+  position: absolute;
+  width: 19px;
+  height: 34px;
+  padding: 5px; }
+
+.leftControl {
+  left: -3%;
+  background: url(/Theme/Air/assets/Slido/img/left.png) no-repeat 50% 50%; }
+
+.rightControl {
+  right: -3%;
+  background: url(/Theme/Air/assets/Slido/img/right.png) no-repeat 50% 50%; }
+
+.pager {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  min-height: 50px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20%;
+  box-sizing: border-box; }
+  .pager li {
+    width: 10px;
+    height: 10px;
+    background-color: #817878;
+    border-radius: 10px;
+    border: 2px solid #FFF8F3;
+    cursor: pointer; }
+  .pager li.active {
+    background-color: white;
+    border: 2px solid black; }
+
+.slido {
+  position: relative;
+  height: inherit;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: 0s;
+          transition-duration: 0s; }
+  .slido > li {
+    height: inherit;
+    position: relative;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
+    .slido > li > img {
+      width: inherit; }
+
+.addSlide {
+  background: url("img/plus.min.jpg") no-repeat 0 0;
+  position: absolute;
+  bottom: -39px;
+  right: 90px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 100; }
+
+.deleteSlide {
+  background: url("img/minus.min.jpg") no-repeat 0 0;
+  position: absolute;
+  bottom: -39px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 100; }
+
+/*# sourceMappingURL=slido.css.map */

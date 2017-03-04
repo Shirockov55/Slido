@@ -1,0 +1,16 @@
+.controls {
+    cursor: pointer;
+    z-index: 100;
+    top: 46%;
+    position: absolute;
+    width: 26px;
+    height: 44px;
+}
+.leftControl {
+    left: 50px;
+    background: url($url+"/left.png") $norm;
+}
+.rightControl {
+    right: 50px;
+    background: url($url+"/right.png") $norm;
+}

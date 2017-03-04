@@ -1,0 +1,89 @@
+%ul-clear{list-style: none;margin: 0;padding: 0;}
+%li-clear{list-style: none;/*margin: 0;*/padding: 0;}
+$center: no-repeat 50% 50%;
+$url:/Theme/Air/assets/Slido/img;
+//////////ADJUSTMENT//////////
+.controls {
+    cursor: pointer;
+    z-index: 100;
+    bottom: calc(50% - 17px);
+    position: absolute;
+    width: 19px;
+    height: 34px;
+    padding: 5px;
+}
+.leftControl {
+    left: -3%;
+    background: url($url+"/left.png") $center;
+}
+.rightControl {
+    right: -3%;
+    background: url($url+"/right.png") $center;
+}
+.pager {
+	width: 100%;
+	position: absolute;
+	left:0;bottom: -50px;
+    @extend %ul-clear;
+    display: flex;
+    justify-content: space-around;
+    min-height: 50px;
+    align-items: center;
+    padding: 0 20%;
+    box-sizing: border-box;
+    li {
+        width: 10px;height: 10px;
+        background-color: #817878;
+        border-radius: 10px;
+        border: 2px solid #FFF8F3;
+        cursor: pointer;
+        @extend %li-clear;
+    }
+    li.active {
+        background-color: white;
+        border: 2px solid black;
+    }  
+}
+//////////CSS CORE///////
+.slido{
+	position: relative;
+	@extend %ul-clear;
+	height: inherit;
+	display: flex;
+	transition-timing-function: ease;
+	transition-duration: 0s;
+	& > li{
+		height: inherit;
+		@extend %li-clear;
+		position: relative;
+		flex-shrink: 0;
+		display: flex;
+		justify-content: space-around;
+		& > img{
+			//margin: auto;
+			width: inherit;
+		}
+	}
+}
+//////////ADMIN//////////
+
+.addSlide{
+	background: url("img/plus.min.jpg") no-repeat 0 0;
+	position: absolute;
+	bottom: -39px;right: 90px;
+	width: 30px;height: 30px;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	cursor: pointer;
+	z-index: 100;
+}
+.deleteSlide{
+	background: url("img/minus.min.jpg") no-repeat 0 0;
+	position: absolute;
+	bottom: -39px;right: 30px;
+	width: 30px;height: 30px;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	cursor: pointer;
+	z-index: 100;
+}
